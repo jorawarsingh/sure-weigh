@@ -3,9 +3,9 @@ import {ShipperService} from './shipper.service';
 import {IShipper} from './ishipper';
 
 @Component({
-  selector: 'app-shipper',
+  selector: 'sw-shipper',
   templateUrl: 'shipper.component.html',
-  styleUrls: ['shipper.component.css']
+  styleUrls: ['shipper.component.scss']
 })
 export class ShipperComponent {
   shippers: IShipper[];

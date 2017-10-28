@@ -7,3 +7,10 @@ body {
 
 }
 
+ul {
+  margin: 0px
+}
+
+a:hover {
+  text-decoration: none
+}

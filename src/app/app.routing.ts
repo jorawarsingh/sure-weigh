@@ -1,20 +1,16 @@
-import {NgModule, Component} from '@angular/core';
-import {RouterModule} from '@angular/router';
-import {LoginComponent} from './admin/login/login.component';
-import {PageNotFoundComponent} from './404';
-import {ResetPasswordComponent} from './admin/login/forgot-password.component';
-import {ChangePasswordComponent} from './admin/login/change-password.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import {AdminModule} from './admin/admin.module';
 
+const routes: Routes = [
+    {
+        path: 'dashboard',
+        loadChildren: './dashboard/dashboard.module#DashboardModule'
+    }
+];
 
 @NgModule({
-  exports: [
-    RouterModule,
-  ],
-  imports: [
-    RouterModule.forRoot([
-      {component: PageNotFoundComponent, path: '**'},
-    ]),
-  ],
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule { }

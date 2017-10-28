@@ -2,9 +2,9 @@ import {NgModule} from '@angular/core';
 import {LoginComponent} from './login/login.component';
 import {ChangePasswordComponent} from './login/change-password.component';
 import {ResetPasswordComponent} from './login/forgot-password.component';
-import {RouterModule} from '@angular/router';
 import {AdminRoutingModule} from './admin-routing.module';
 import {AdminComponent} from './admin.component';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,10 @@ import {AdminComponent} from './admin.component';
     ChangePasswordComponent,
     ResetPasswordComponent,
     AdminComponent],
-  imports: [RouterModule, AdminRoutingModule]
+  imports: [
+      CommonModule,
+      AdminRoutingModule
+  ]
 })
 export class AdminModule {
 }

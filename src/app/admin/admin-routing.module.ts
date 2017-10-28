@@ -12,11 +12,11 @@ import {AdminComponent} from './admin.component';
   imports: [
     RouterModule.forChild([
       {
-        component: AdminComponent, path: '',
+        component: AdminComponent, path: 'user',
         children: [
-          {component: LoginComponent, path: 'login'},
-          {component: ResetPasswordComponent, path: 'reset-password'},
-          {component: ChangePasswordComponent, path: 'change-password'}
+          {component: LoginComponent, path: 'login', },
+          {component: ResetPasswordComponent, path: 'reset-password', },
+          {component: ChangePasswordComponent, path: 'change-password',  }
         ]
       }
     ]),

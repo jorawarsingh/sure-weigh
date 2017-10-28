@@ -1,26 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { AppComponent } from './app.component';
-import {ShipperComponent} from './shipper/shipper.component';
-import {ShipperService} from './shipper/shipper.service';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
+import {AppComponent} from './app.component';
 import {PageNotFoundComponent} from './404';
-import {AdminModule} from './admin/admin.module';
 import {AppRoutingModule} from './app.routing';
+import {AdminModule} from './admin/admin.module';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ShipperComponent,
-    PageNotFoundComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AdminModule,
-    AppRoutingModule
-  ],
-  providers: [ShipperService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        PageNotFoundComponent
+    ],
+    imports: [
+        AppRoutingModule,
+        RouterModule,
+        BrowserModule,
+        HttpClientModule,
+        AdminModule
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
