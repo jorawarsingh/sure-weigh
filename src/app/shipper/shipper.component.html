@@ -1,0 +1,23 @@
+<div class="col-md-3" *ngFor="let shipper of shippers; let odd=odd; let even=even;">
+  <div class="box" [ngClass]="{
+    'non-Complient': shipper.Status == 'Non-Complient',
+      'pending':shipper.Status == 'Pending',
+      'in-progress':shipper.Status == 'In progress',
+           'assured': shipper.Status == 'Assured'}">
+    <h4>{{shipper.Shipper}}</h4>
+    <ul>
+      <li>B.O.L {{shipper.BOL}}</li>
+      <li>Phone: {{shipper.Phone}}</li>
+      <li>Email: {{shipper.Email}}</li>
+    </ul>
+    <ul>
+      <li>Driver: {{shipper.Driver}}</li>
+      <li>Phone: {{shipper.DriverPhone}}</li>
+
+    </ul>
+    <div class="option_div">
+      <span><a href=""><i aria-hidden="true" class="fa fa-pencil" onclick="closeContact()"></i></a></span>
+      <span><a href=""><i aria-hidden="true" class="fa fa-trash" onclick="closeContact()"></i></a></span>
+    </div>
+  </div>
+</div>

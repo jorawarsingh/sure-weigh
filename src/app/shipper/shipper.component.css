@@ -1,0 +1,44 @@
+.box {
+  border: 2px solid #1f3763;
+  padding: 10px;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  font-weight: 300;
+  margin: 10px 0;
+  position: relative;
+}
+.non-Complient {
+  background: orange;
+}
+
+.assured {
+  background: green;
+}
+
+.pending {
+  background: darkblue;
+}
+
+.in-progress {
+  background: lightblue;
+}
+.option_div {
+  position: absolute;
+  bottom: 15px;
+  right: 10px
+}
+
+.option_div .fa {
+  font-size: 16px;
+  margin: 6px;
+  color: #fff
+}
+
+ul {
+  padding: 0px;
+  margin: 10px 0
+}
+li {
+  list-style: none
+}
