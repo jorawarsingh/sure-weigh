@@ -1,4 +1,4 @@
-export interface IShipper {
+export interface IJobs {
   Shipper: string;
   BOL: string;
   Phone: string;

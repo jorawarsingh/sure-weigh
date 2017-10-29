@@ -4,7 +4,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {PageNotFoundComponent} from './404';
 import {AppRoutingModule} from './app.routing';
-import {AdminModule} from './admin/admin.module';
+import {AuthModule} from './auth/auth.module';
 import {RouterModule} from '@angular/router';
 
 @NgModule({
@@ -17,7 +17,7 @@ import {RouterModule} from '@angular/router';
         RouterModule,
         BrowserModule,
         HttpClientModule,
-        AdminModule
+        AuthModule
     ],
     bootstrap: [AppComponent]
 })

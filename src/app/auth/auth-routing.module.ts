@@ -3,7 +3,7 @@ import {RouterModule} from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {ResetPasswordComponent} from './login/forgot-password.component';
 import {ChangePasswordComponent} from './login/change-password.component';
-import {AdminComponent} from './admin.component';
+import {AuthComponent} from './auth.component';
 
 @NgModule({
   exports: [
@@ -12,11 +12,11 @@ import {AdminComponent} from './admin.component';
   imports: [
     RouterModule.forChild([
       {
-        component: AdminComponent, path: 'user',
+        component: AuthComponent, path: '',
         children: [
-          {component: LoginComponent, path: 'login', },
-          {component: ResetPasswordComponent, path: 'reset-password', },
-          {component: ChangePasswordComponent, path: 'change-password',  }
+          {component: LoginComponent, path: 'login'},
+          {component: ResetPasswordComponent, path: 'reset-password'},
+          {component: ChangePasswordComponent, path: 'change-password'}
         ]
       }
     ]),
