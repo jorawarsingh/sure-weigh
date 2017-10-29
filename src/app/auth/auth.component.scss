@@ -1,6 +1,7 @@
 :focus {
   outline: 0px
 }
+
 .logo {
   margin-bottom: 80px;
   text-align: center;
@@ -11,56 +12,64 @@
   }
 }
 
-:host ::ng-deep .login {
-  display: flex;
-  height: 90vh;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  input {
-    width: 100%;
-    background: #fff;
-    text-align: center;
-    border: 1px solid #051a32;
-    border-radius: 10px;
-    display: block;
-    padding: 15px;
-    margin: 15px 0
-  }
-  span {
-    color: red;
-    font-size: 16px;
-    display: block;
-  }
-  form {
-    margin: auto
-  }
-  a {
-    text-decoration: underline;
-    font-size: 18px;
+:host ::ng-deep {
+  .marginThirty {
+    margin: 30px 0;
     display: block
   }
-  label {
-    font-size: 18px;
-    display: block;
-    font-weight: 300;
-    max-width: 356px;
-    color: #051a32;
-    /* float: left; */
-    width: 100%;
-    text-align: left;
-  }
-  button {
-    display: block;
-    background: #051a32;
-    color: #fff;
-    padding: 10px 30px;
-    border: 0px;
-    border-radius: 10px;
-    font-size: 19px;
-    margin: 24px auto;
-    &:hover {
-      background: #5dcf11;
+  .login {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    input {
+      width: 100%;
+      background: #fff;
+      text-align: center;
+      border: 1px solid #051a32;
+      border-radius: 10px;
+      display: block;
+      padding: 15px;
+      margin: 15px 0
+    }
+    span {
+      color: red;
+      font-size: 16px;
+      display: block;
+    }
+    form {
+      margin: auto;
+      width: 300px;
+    }
+    a {
+      text-decoration: underline;
+      font-size: 18px;
+      display: block
+    }
+    label {
+      font-size: 18px;
+      display: block;
+      font-weight: 300;
+      max-width: 356px;
+      color: #051a32;
+      /* float: left; */
+      width: 100%;
+      text-align: left;
+    }
+    button {
+      display: block;
+      background: #051a32;
+      color: #fff;
+      padding: 10px 30px;
+      border: 0px;
+      border-radius: 10px;
+      font-size: 19px;
+      margin: 24px auto;
+      &:hover {
+        background: #5dcf11;
+      }
     }
   }
 }
+
