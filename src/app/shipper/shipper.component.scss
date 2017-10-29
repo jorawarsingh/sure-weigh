@@ -22,7 +22,7 @@ ul {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  height: 300px;
+  height: 400px;
   overflow: auto;
   background: #fff;
   padding: 0;
@@ -70,28 +70,73 @@ li {
   border: 1px solid #051a32;
   border-radius: 5px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 300px;
+  height: 400px;
+  padding: 10px;
+  overflow: auto;
   h3 {
     color: #051a32;
     font-size: 18px;
     line-height: 1.5;
+    margin: 175px 0 0;
   }
 }
 
 .no-padding {
   padding: 0px;
 }
+
 .active-link {
   background: #051a32 !important;
   color: #fff !important;
 }
-.active-shipper{
+
+.active-shipper {
   background: #051a32;
   color: #fff;
-  &:hover{
+  &:hover {
+    color: #fff;
+  }
+}
+
+.form-group {
+  float: left;
+  width: 100%;
+  padding:5px 15px;
+}
+
+.form-group label {
+  float: left;
+  font-size: 18px;
+  color: #051a32;
+  font-weight: 300;
+  width: 20%;
+  margin: 5px 0;
+  text-align: right;
+}
+
+.form-group input {
+  float: right;
+  width: 78%;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid #051a32;
+  padding: 10px!important;
+  height: auto;
+}
+span{
+  color: red;
+}
+button {
+  display: block;
+  background: #051a32;
+  color: #fff;
+  padding: 10px 30px;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 19px;
+  margin: 24px auto;
+  &:hover {
+    background: #5dcf11;
     color: #fff;
   }
 }
