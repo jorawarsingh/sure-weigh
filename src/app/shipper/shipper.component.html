@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-12  no-padding">
+        <input class="search" type="text" placeholder="Search ...">
+    </div>
+    <div class="col-md-3 no-padding">
+        <div class="leftBar">
+            <ul>
+                <li class="active-shipper" (click)="handleShipper()">Bob Smith</li>
+                <li>Jane Doe</li>
+                <li>Dan Miltary</li>
+            </ul>
+            <a [routerLink]="['/dashboard/shipper']" routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{exact:true}">Shipper</a>
+            <a [routerLink]="['/dashboard/driver']" routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{exact: true}">Driver</a>
+            <i class="fa fa-plus" aria-hidden="true" (click)="handleShipper()"></i>
+            <i class="fa fa-trash-o" aria-hidden="true" (click)="deleteShipper()"></i>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="contentArea">
+            <div *ngIf="deleteShipperConfirmPopup">
+                <h1>Delete Shipper</h1>
+            </div>
+            <h3 *ngIf="!detailVisible">Click on a shipper to view or edit. <br/> To add a new shipper , press the "+" button</h3>
+            <div *ngIf="detailVisible">
+                <form>
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

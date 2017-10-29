@@ -9,15 +9,17 @@
                 <li>Jane Doe</li>
                 <li>Dan Miltary</li>
             </ul>
-            <button>Shipper</button>
-            <button>Driver</button>
+            <a [routerLink]="['/dashboard/shipper']" routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{exact: true}">Shipper</a>
+            <a [routerLink]="['/dashboard/driver']" routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{exact: true}">Driver</a>
             <i class="fa fa-plus" aria-hidden="true"></i>
             <i class="fa fa-trash-o" aria-hidden="true"></i>
         </div>
     </div>
     <div class="col-md-9">
         <div class="contentArea">
-            <h3>Click on a shipper to view or edit. <br/> To add a new shipper , press the "+" button</h3>
+            <h3>Click on a shipper to view or edit. <br/> To add a new driver , press the "+" button</h3>
         </div>
     </div>
 </div>

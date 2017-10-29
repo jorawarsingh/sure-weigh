@@ -1,0 +1,97 @@
+.search {
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 20px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  margin: 10px 0 30px;
+  &:focus {
+    width: 100%;
+  }
+}
+
+/* When the input field gets focus, change its width to 100% */
+
+ul {
+  border: 1px solid #051a32;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  height: 300px;
+  overflow: auto;
+  background: #fff;
+  padding: 0;
+}
+
+li {
+  &:hover {
+    color: #051a32;
+  }
+  list-style: none;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.leftBar a {
+  &:hover {
+    background: #051a32;
+    color: #fff;
+    text-decoration: none;
+  }
+  border: 0px;
+  padding: 5px 15px;
+  margin-right: 5px;
+  color: #000;
+  font-size: 18px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #051a32;
+  display: inline-block;
+}
+
+.fa {
+  font-size: 18px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.fa-plus {
+  color: red;
+}
+
+.contentArea {
+  border: 1px solid #051a32;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 300px;
+  h3 {
+    color: #051a32;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+.no-padding {
+  padding: 0px;
+}
+.active-link {
+  background: #051a32 !important;
+  color: #fff !important;
+}
+.active-shipper{
+  background: #051a32;
+  color: #fff;
+  &:hover{
+    color: #fff;
+  }
+}

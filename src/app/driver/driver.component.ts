@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-    template: '<h1>Driver</h1>'
+    templateUrl: 'driver.component.html',
+    styleUrls: ['../shipper/shipper.component.scss', 'driver.component.scss']
 })
 export class DriverComponent {}
