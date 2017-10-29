@@ -3,10 +3,10 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Rx';
 import {IJobs} from './ijobs';
 @Injectable()
-export class ShipperService {
+export class JobService {
   _baseUrl = 'http://ppswtest.azurewebsites.net/api/values';
   constructor(private http: HttpClient) {}
-  getShipperData(): Observable<IJobs[]> {
+  getJobs(): Observable<IJobs[]> {
     return this.http.get(this._baseUrl)
       .catch(err => Observable.throw(err.json()));
   }

@@ -1,23 +1,45 @@
-<div class="col-md-3" *ngFor="let shipper of shippers; let odd=odd; let even=even;">
-  <div class="box" [ngClass]="{
-    'non-Complient': shipper.Status == 'Non-Complient',
-      'pending':shipper.Status == 'Pending',
-      'in-progress':shipper.Status == 'In Progress',
-           'assured': shipper.Status == 'Assured'}">
-    <h4>{{shipper.Shipper}}</h4>
-    <ul>
-      <li>B.O.L {{shipper.BOL}}</li>
-      <li>Phone: {{shipper.Phone}}</li>
-      <li>Email: {{shipper.Email}}</li>
-    </ul>
-    <ul>
-      <li>Driver: {{shipper.Driver}}</li>
-      <li>Phone: {{shipper.DriverPhone}}</li>
+<div class="col-md-3" *ngFor="let job of jobs; let odd=odd; let even=even;">
+    <div class="overlay" *ngIf="jobDetailPopup && job.Email === jobDetail.Email">
+        <div class="popup">
+            <h2>{{jobDetail.Shipper}}</h2>
+            <a class="close" href="javascript:void(0)" (click)="closeJobDetail()">&times;</a>
+            <ul>
+                <li>B.O.L {{jobDetail.BOL}}</li>
+                <li>Phone: {{jobDetail.Phone}}</li>
+                <li>Email: {{jobDetail.Email}}</li>
+            </ul>
+            <ul>
+                <li>Driver: {{jobDetail.Driver}}</li>
+                <li>Phone: {{jobDetail.DriverPhone}}</li>
 
-    </ul>
-    <div class="option_div">
-      <span><a href=""><i aria-hidden="true" class="fa fa-pencil" onclick="closeContact()"></i></a></span>
-      <span><a href=""><i aria-hidden="true" class="fa fa-trash" onclick="closeContact()"></i></a></span>
+            </ul>
+        </div>
     </div>
-  </div>
+    <div (click)="openJobDetail(job)" class="box" [ngClass]="{
+    'non-Complient': job.Status == 'Non-Complient',
+      'pending':job.Status == 'Pending',
+      'in-progress':job.Status == 'In Progress',
+           'assured': job.Status == 'Assured'}">
+        <h4>{{job.Shipper}}</h4>
+        <ul>
+            <li>B.O.L {{job.BOL}}</li>
+            <li>Phone: {{job.Phone}}</li>
+            <li>Email: {{job.Email}}</li>
+        </ul>
+        <ul>
+            <li>Driver: {{job.Driver}}</li>
+            <li>Phone: {{job.DriverPhone}}</li>
+
+        </ul>
+        <div class="option_div">
+            <span><a href="javascript:void(0)" (click)="openJobHandler()"><i aria-hidden="true"
+                                                                             class="fa fa-pencil"></i></a></span>
+            <span><a href="javascript:void(0)"><i aria-hidden="true" class="fa fa-trash"
+                                                  onclick="closeContact()"></i></a></span>
+        </div>
+    </div>
+</div>
+<div *ngIf="jobHandler">
+    <button (click)="closeJobHandler()">X</button>
+    <h1>Hello world!</h1>
 </div>

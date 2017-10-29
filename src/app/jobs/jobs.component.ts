@@ -1,20 +1,42 @@
 import {Component} from '@angular/core';
-import {ShipperService} from './jobs.service';
+import {JobService} from './jobs.service';
 import {IJobs} from './ijobs';
 
 @Component({
-  selector: 'sw-shipper',
-  templateUrl: 'jobs.component.html',
-  styleUrls: ['jobs.component.scss']
+    selector: 'sw-shipper',
+    templateUrl: 'jobs.component.html',
+    styleUrls: ['jobs.component.scss']
 })
 export class JobsComponent {
-  shippers: IJobs[];
-  constructor(private shipperService: ShipperService) {
-    this.shipperService.getShipperData().subscribe(
-      shippers => {
-        this.shippers = shippers;
-      },
-          err => console.log(err)
-      );
-  }
+    jobs: IJobs[];
+    jobHandler: boolean;
+    jobDetailPopup: boolean;
+    jobDetail: IJobs;
+
+    constructor(private jobService: JobService) {
+        this.jobService.getJobs().subscribe(
+            jobs => {
+                this.jobs = jobs;
+            },
+            err => console.log(err)
+        );
+    }
+
+    closeJobHandler() {
+        this.jobHandler = false;
+    }
+
+    openJobHandler() {
+        this.jobHandler = true;
+    }
+
+    openJobDetail(job) {
+        this.jobDetailPopup = true;
+        this.jobDetail = job;
+    }
+
+    closeJobDetail() {
+        this.jobDetailPopup = false;
+        this.jobDetail = null;
+    }
 }
