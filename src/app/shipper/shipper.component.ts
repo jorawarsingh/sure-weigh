@@ -1,6 +1,9 @@
 import {Component} from '@angular/core';
 
 @Component({
-    template: '<h1>Shipper</h1>'
+    templateUrl: 'shipper.html',
+    styleUrls: ['shipper.css']
+
+
 })
 export class ShipperComponent {}
