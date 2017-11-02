@@ -4,6 +4,8 @@ import { DashboardComponent } from './dashboard.component';
 import {JobsComponent} from '../jobs/jobs.component';
 import {DriverComponent} from '../driver/driver.component';
 import {ShipperComponent} from '../shipper/shipper.component';
+import {CanActivateAdmin} from "../auth/gaurds/can-activate-admin.service";
+import {CanActivateShipper} from "../auth/gaurds/can-activate-shipper.service";
 
 const routes: Routes = [
     {
@@ -12,15 +14,38 @@ const routes: Routes = [
         children: [
             {
                 path: 'jobs',
-                component: JobsComponent
+                loadChildren: 'app/jobs/jobs.module#JobsModule',
+                canLoad: [
+                    CanActivateShipper
+                ]
             },
             {
                 path: 'shipper',
-                component: ShipperComponent
+                loadChildren: 'app/shipper/shipper.module#ShipperModule',
+                canLoad: [
+                    CanActivateShipper
+                ]
             },
             {
                 path: 'driver',
-                component: DriverComponent
+                loadChildren: 'app/driver/driver.module#DriverModule',
+                canLoad: [
+                    CanActivateShipper
+                ]
+            },
+            {
+                path: 'admin',
+                loadChildren: 'app/admin/admin.module#AdminModule',
+                canLoad: [
+                CanActivateAdmin
+            ]
+            },
+            {
+                path: 'coordinator',
+                loadChildren: 'app/coordinator/coordinator.module#CoordinatorModule',
+                canLoad: [
+                    CanActivateAdmin
+                ]
             }
         ]
     }
