@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {JobService} from './jobs.service';
 import {IJobs} from './ijobs';
+import {DashboardService} from '../dashboard/dashboard.service';
 
 @Component({
     selector: 'sw-shipper',
@@ -9,11 +10,11 @@ import {IJobs} from './ijobs';
 })
 export class JobsComponent {
     jobs: IJobs[];
-    jobHandler: boolean;
     jobDetailPopup: boolean;
     jobDetail: IJobs;
+    showJobHandlerPopup = this.dashboardService.jobPopupHandler;
 
-    constructor(private jobService: JobService) {
+    constructor(private jobService: JobService, private dashboardService: DashboardService) {
         this.jobService.getJobs().subscribe(
             jobs => {
                 this.jobs = jobs;
@@ -21,13 +22,8 @@ export class JobsComponent {
             err => console.log(err)
         );
     }
-
-    closeJobHandler() {
-        this.jobHandler = false;
-    }
-
     openJobHandler() {
-        this.jobHandler = true;
+        this.dashboardService.jobPopupHandler.next(true);
     }
 
     openJobDetail(job) {

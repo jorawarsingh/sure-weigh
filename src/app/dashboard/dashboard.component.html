@@ -13,7 +13,9 @@
             <div class="col-lg-3 text-right res_left">
 
                 <ul class="dashboard_shortcut">
-                    <li class="plus_short"><a href="#"></a></li>
+                    <li class="plus_short" (click)="addNewJob()">
+                        <a href="javascript:void(0)" [routerLink]="['jobs']"></a>
+                    </li>
                     <li class="search_short"><a href="#"></a></li>
                     <li class="group_short"><a href="javascript:void(0)" [routerLink]="['/dashboard/shipper']"></a></li>
                     <li class="tv_short"><a href="#"></a></li>

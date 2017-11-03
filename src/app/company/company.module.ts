@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
-import {AdminComponent} from './admin.component';
+import {AdminComponent} from './company.component';
 import {RouterModule} from '@angular/router';
-import {DriverRoutingModule} from './admin.routing.module';
+import {DriverRoutingModule} from './company.routing.module';
 
 @NgModule({
     imports: [

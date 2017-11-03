@@ -5,6 +5,6 @@ import {Observable} from 'rxjs/Observable';
 @Injectable()
 export class CanActivateAdmin implements CanLoad {
     canLoad(route: Route): Observable<boolean> | Promise<boolean> | boolean {
-        return false;
+        return true;
     }
 }
