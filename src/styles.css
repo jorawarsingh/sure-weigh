@@ -11,9 +11,6 @@ ul {
   margin: 0px
 }
 
-a:hover {
+a:hover, a {
   text-decoration: none
-}
-:focus{
-  outline: none;
 }

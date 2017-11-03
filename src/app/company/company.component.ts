@@ -4,4 +4,4 @@ import {Component} from '@angular/core';
     templateUrl: 'company.component.html',
     styleUrls: ['../shipper/shipper.component.scss', 'company.component.scss']
 })
-export class AdminComponent {}
+export class CompanyComponent {}

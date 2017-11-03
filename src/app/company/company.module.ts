@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
-import {AdminComponent} from './company.component';
+import {CompanyComponent} from './company.component';
 import {RouterModule} from '@angular/router';
-import {DriverRoutingModule} from './company.routing.module';
+import {CompanyRoutingModule} from './company.routing.module';
 
 @NgModule({
     imports: [
         RouterModule,
-        DriverRoutingModule
+        CompanyRoutingModule
     ],
-    declarations: [AdminComponent]
+    declarations: [CompanyComponent]
 })
-export class AdminModule {}
+export class CompanyModule {}
