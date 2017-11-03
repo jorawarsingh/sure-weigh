@@ -1,0 +1,69 @@
+/* Rounded sliders */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 117px;
+  height: 41px;
+  input {
+    display: none;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 43px;
+  color: #051a32!important;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 41px;
+    width: 41px;
+    left: 0px;
+    bottom: 1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.31);
+  }
+}
+
+input {
+  &:checked {
+    + {
+      .slider {
+        background-color: #8ce196;
+        &:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(90px);
+        }
+      }
+    }
+  }
+  &:focus {
+    + {
+      .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+    }
+  }
+}
+
+.slider.round {
+  border-radius: 34px;
+  &:before {
+    border-radius: 50%;
+  }
+}
+.disable_button{ background: none!important; border: 1px solid #999; color: #999}
+.disable_button:hover{ background: #999!important; }
