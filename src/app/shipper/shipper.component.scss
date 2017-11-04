@@ -143,3 +143,11 @@ button {
     color: #fff;
   }
 }
+.cancel:hover{ background: none; color: #051a32;}
+.cancel{
+  border: 0px;
+  background: none;
+  padding:0;
+  text-decoration: underline;
+  color: #051a32;
+}
