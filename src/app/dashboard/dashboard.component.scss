@@ -26,8 +26,8 @@ ul {
   display: inline-block;
   position: relative;
   button{
-    height: 28px;
-    width: 26px;
+    height: 32px;
+    width: 30px;
     margin-left: 5px;
     float: left;
     border: 0px;
@@ -63,33 +63,33 @@ ul {
 }
 .addjob button{
   background: url(../../images/plus-icon.jpg) no-repeat;
-  background-size: 28px;
+  background-size: 32px;
 
 }
 
 .search_short button {
   background: url(../../images/search-icon.jpg) no-repeat;
-  background-size: 28px;
+  background-size: 32px;
 }
 
 .group_short button {
   background: url(../../images/group-icon.jpg) no-repeat;
-  background-size: 30px;
+  background-size: 34px;
 }
 
 .tv_short button {
   background: url(../../images/tv-icon.jpg) no-repeat;
-  background-size: 29px;
+  background-size: 33px;
 }
 
 .setting_short button {
   background: url(../../images/setting-icon.jpg) no-repeat;
-  background-size: 28px;
+  background-size: 32px;
 }
 
 .logout_short button {
   background: url(../../images/logout-icon.jpg) no-repeat;
-  background-size: 28px;
+  background-size: 32px;
 }
 
 hr {
@@ -97,6 +97,7 @@ hr {
   height: 1px;
   width: 100%;
   float: left;
+  margin: 0;
 }
 :host ::ng-deep  .k-input{
   background: #e6e6e4;
