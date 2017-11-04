@@ -8,7 +8,14 @@
                 <h3>Welcome back , <span>Nick !</span></h3>
             </div>
             <div class="col-md-6 text-center res_left">
-                <h3 *ngIf="jobViewActive | async"><span><< October 18, 2017 >></span></h3>
+                <h3 *ngIf="jobViewActive | async">
+                    <span>
+                   <span class="date-arrow" (click)="previousDate()"><<</span>  <kendo-datepicker
+                        [(value)]="value"
+                        [format]="'MMMM dd yyyy'"></kendo-datepicker>
+                        <span class="date-arrow" (click)="nextDate()">>></span>
+                    </span>
+                </h3>
                 <h3>{{viewTitle | async}}</h3>
             </div>
             <div class="col-lg-3 text-right res_left">

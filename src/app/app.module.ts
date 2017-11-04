@@ -7,6 +7,7 @@ import {AppRoutingModule} from './app.routing';
 import {AuthModule} from './auth/auth.module';
 import {RouterModule} from '@angular/router';
 import {TimingInterceptor} from './http/http-interceptor';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import {TimingInterceptor} from './http/http-interceptor';
         AppRoutingModule,
         RouterModule,
         BrowserModule,
+        BrowserAnimationsModule,
         HttpClientModule,
         AuthModule
     ],

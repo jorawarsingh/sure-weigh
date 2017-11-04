@@ -1,14 +1,16 @@
 import {NgModule} from '@angular/core';
 import {DashboardComponent} from './dashboard.component';
 import {DashboardRoutingModule} from './dashboard.routing.module';
-import {JobService} from "../jobs/jobs.service";
 import {DashboardService} from './dashboard.service';
 import {CommonModule} from '@angular/common';
-
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { IntlModule } from '@progress/kendo-angular-intl';
 @NgModule({
     imports: [
         DashboardRoutingModule,
-        CommonModule
+        CommonModule,
+        DateInputsModule,
+        IntlModule
     ],
     declarations: [DashboardComponent],
     providers: [DashboardService]

@@ -10,6 +10,7 @@ export class DashboardComponent {
     searching: boolean;
     jobViewActive = this.dashboardService.jobViewActive;
     viewTitle = this.dashboardService.viewTitle;
+    public value: Date = new Date();
     constructor(private dashboardService: DashboardService) {
         console.log('dashboard loaded');
     }
@@ -19,5 +20,11 @@ export class DashboardComponent {
     }
     toggleSearch () {
         this.searching = !this.searching;
+    }
+    previousDate() {
+        this.value = new Date(this.value.setDate(this.value.getDate() - 1));
+    }
+    nextDate() {
+        this.value = new Date(this.value.setDate(this.value.getDate() + 1));
     }
 }
