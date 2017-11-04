@@ -24,15 +24,42 @@ ul {
 
 .dashboard_shortcut li {
   display: inline-block;
-  a {
-    height:32px;
-    width: 30px;
+  position: relative;
+  button{
+    height: 28px;
+    width: 26px;
     margin-left: 5px;
     float: left;
+    border: 0px;
     &:hover{
       opacity: .6;
+    } &:focus{
+      outline:none;
     }
   }
+  .search-container{
+    position: absolute;
+    right: 263px;
+    top: -18px;
+  }
+  .search {
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin: 10px 0 30px;
+    border-radius: 50px;
+    &:focus {
+      outline: none;
+    }
+  }
+
 }
 .addjob a{
   background: url(../../images/plus-icon.jpg) no-repeat;

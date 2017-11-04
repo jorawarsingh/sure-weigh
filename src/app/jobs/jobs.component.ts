@@ -15,6 +15,7 @@ export class JobsComponent {
     showJobHandlerPopup = this.dashboardService.jobPopupHandler;
 
     constructor(private jobService: JobService, private dashboardService: DashboardService) {
+        this.dashboardService.jobViewActive.next(true);
         this.jobService.getJobs().subscribe(
             jobs => {
                 this.jobs = jobs;
