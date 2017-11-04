@@ -31,7 +31,11 @@
       border-radius: 10px;
       display: block;
       padding: 15px;
-      margin: 15px 0
+      margin: 15px 0;
+      font-size: ;
+      &:focus {
+        outline: none;
+      }
     }
     span {
       color: red;
