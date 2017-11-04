@@ -7,11 +7,17 @@ import {DashboardService} from './dashboard.service';
     styleUrls: ['dashboard.component.scss']
 })
 export class DashboardComponent {
+    searching: boolean;
+    jobViewActive = this.dashboardService.jobViewActive;
+    viewTitle = this.dashboardService.viewTitle;
     constructor(private dashboardService: DashboardService) {
         console.log('dashboard loaded');
     }
 
     addNewJob() {
         this.dashboardService.jobPopupHandler.next(true);
+    }
+    toggleSearch () {
+        this.searching = !this.searching;
     }
 }

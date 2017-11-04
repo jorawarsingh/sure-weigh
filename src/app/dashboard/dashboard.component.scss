@@ -24,43 +24,70 @@ ul {
 
 .dashboard_shortcut li {
   display: inline-block;
-  a {
+  position: relative;
+  button{
     height: 28px;
     width: 26px;
     margin-left: 5px;
     float: left;
+    border: 0px;
     &:hover{
       opacity: .6;
+    } &:focus{
+      outline:none;
     }
   }
+  .search-container{
+    position: absolute;
+    right: 263px;
+    top: -18px;
+  }
+  .search {
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin: 10px 0 30px;
+    border-radius: 50px;
+    &:focus {
+      outline: none;
+    }
+  }
+
 }
-.addjob a{
+.addjob button{
   background: url(../../images/plus-icon.jpg) no-repeat;
   background-size: 28px;
 
 }
 
-.search_short a {
+.search_short button {
   background: url(../../images/search-icon.jpg) no-repeat;
   background-size: 28px;
 }
 
-.group_short a {
+.group_short button {
   background: url(../../images/group-icon.jpg) no-repeat;
   background-size: 30px;
 }
 
-.tv_short a {
+.tv_short button {
   background: url(../../images/tv-icon.jpg) no-repeat;
   background-size: 29px;
 }
 
-.setting_short a {
+.setting_short button {
   background: url(../../images/setting-icon.jpg) no-repeat;
   background-size: 28px;
 }
 
-.logout_short a {
+.logout_short button {
   background: url(../../images/logout-icon.jpg) no-repeat;
   background-size: 28px;
 }

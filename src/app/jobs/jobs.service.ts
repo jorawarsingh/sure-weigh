@@ -6,7 +6,6 @@ import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 @Injectable()
 export class JobService {
   _baseUrl = 'http://ppswtest.azurewebsites.net/api/values';
-  jobHandlerPopUp: BehaviorSubject<boolean> = new BehaviorSubject(false);
   constructor(private http: HttpClient) {}
   getJobs(): Observable<IJobs[]> {
     return this.http.get(this._baseUrl)
