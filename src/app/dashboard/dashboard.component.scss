@@ -26,8 +26,8 @@ ul {
   display: inline-block;
   position: relative;
   button{
-    height: 28px;
-    width: 26px;
+    height: 32px;
+    width: 30px;
     margin-left: 5px;
     float: left;
     border: 0px;
@@ -61,33 +61,33 @@ ul {
   }
 
 }
-.addjob a{
+.addjob button{
   background: url(../../images/plus-icon.jpg) no-repeat;
   background-size: 32px;
 
 }
 
-.search_short a {
+.search_short button {
   background: url(../../images/search-icon.jpg) no-repeat;
   background-size: 32px;
 }
 
-.group_short a {
+.group_short button {
   background: url(../../images/group-icon.jpg) no-repeat;
   background-size: 34px;
 }
 
-.tv_short a {
+.tv_short button {
   background: url(../../images/tv-icon.jpg) no-repeat;
   background-size: 33px;
 }
 
-.setting_short a {
+.setting_short button {
   background: url(../../images/setting-icon.jpg) no-repeat;
   background-size: 32px;
 }
 
-.logout_short a {
+.logout_short button {
   background: url(../../images/logout-icon.jpg) no-repeat;
   background-size: 32px;
 }
