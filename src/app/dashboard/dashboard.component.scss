@@ -25,36 +25,44 @@ ul {
 .dashboard_shortcut li {
   display: inline-block;
   a {
-    background: url(../../images/view_icon.jpg) no-repeat;
     height: 28px;
     width: 26px;
-    background-size: 160px;
     margin-left: 5px;
     float: left;
+    &:hover{
+      opacity: .6;
+    }
   }
 }
-.logout_short a {
-  background-position: -129px 0px !important;
+.addjob a{
+  background: url(../../images/plus-icon.jpg) no-repeat;
+  background-size: 28px;
+
 }
 
 .search_short a {
-  background-position: -26px 0px !important
+  background: url(../../images/search-icon.jpg) no-repeat;
+  background-size: 28px;
 }
 
 .group_short a {
-  background-position: -52px 0px !important
+  background: url(../../images/group-icon.jpg) no-repeat;
+  background-size: 30px;
 }
 
 .tv_short a {
-  background-position: -79px 0px !important
+  background: url(../../images/tv-icon.jpg) no-repeat;
+  background-size: 29px;
 }
 
 .setting_short a {
-  background-position: -104px 0px !important;
+  background: url(../../images/setting-icon.jpg) no-repeat;
+  background-size: 28px;
 }
 
 .logout_short a {
-  background-position: -129px 0px !important;
+  background: url(../../images/logout-icon.jpg) no-repeat;
+  background-size: 28px;
 }
 
 hr {
