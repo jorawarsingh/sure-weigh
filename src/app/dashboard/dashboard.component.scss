@@ -25,8 +25,8 @@ ul {
 .dashboard_shortcut li {
   display: inline-block;
   a {
-    height: 28px;
-    width: 26px;
+    height:32px;
+    width: 30px;
     margin-left: 5px;
     float: left;
     &:hover{
@@ -36,33 +36,33 @@ ul {
 }
 .addjob a{
   background: url(../../images/plus-icon.jpg) no-repeat;
-  background-size: 28px;
+  background-size: 32px;
 
 }
 
 .search_short a {
   background: url(../../images/search-icon.jpg) no-repeat;
-  background-size: 28px;
+  background-size: 32px;
 }
 
 .group_short a {
   background: url(../../images/group-icon.jpg) no-repeat;
-  background-size: 30px;
+  background-size: 34px;
 }
 
 .tv_short a {
   background: url(../../images/tv-icon.jpg) no-repeat;
-  background-size: 29px;
+  background-size: 33px;
 }
 
 .setting_short a {
   background: url(../../images/setting-icon.jpg) no-repeat;
-  background-size: 28px;
+  background-size: 32px;
 }
 
 .logout_short a {
   background: url(../../images/logout-icon.jpg) no-repeat;
-  background-size: 28px;
+  background-size: 32px;
 }
 
 hr {
@@ -70,4 +70,5 @@ hr {
   height: 1px;
   width: 100%;
   float: left;
+  margin: 0;
 }
